@@ -1,7 +1,7 @@
 package tests;
 
 
-import Driver.DriverManager;
+import driver.DriverManager;
 import org.testng.annotations.Test;
 public class HomeTests extends BaseTest {
 

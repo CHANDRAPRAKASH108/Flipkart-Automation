@@ -1,4 +1,4 @@
-package Driver;
+package driver;
 
 import enums.ConfigProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;

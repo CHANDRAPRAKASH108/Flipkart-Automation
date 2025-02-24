@@ -1,9 +1,8 @@
-package Driver;
+package driver;
 
 import enums.ConfigProperties;
 import exceptions.BrowserInvocationFailedException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.Browser;
 import utils.PropertyReaderUtils;
 
 import java.net.MalformedURLException;

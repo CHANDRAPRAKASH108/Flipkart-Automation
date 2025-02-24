@@ -1,6 +1,6 @@
 package tests;
 
-import Driver.Driver;
+import driver.Driver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
