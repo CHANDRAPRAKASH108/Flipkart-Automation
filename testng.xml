@@ -3,11 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/91754/Desktop/flipkartAutomation">
         <classes>
-            <class name="tests.HomeTests">
-                <methods>
-                    <include name="firstTest"/>
-                </methods>
-            </class>
+            <class name="tests.LandingScreenTests"/>
         </classes>
     </test>
 </suite>
