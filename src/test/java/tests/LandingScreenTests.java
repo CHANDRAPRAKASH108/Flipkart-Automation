@@ -15,6 +15,7 @@ public class LandingScreenTests extends BaseTest {
                 .getALlSearchResultElement().get(1).click();
         new LandingPage()
                 .enterIntoProductDescriptionPage("search?q")
-                .clickOnAddToCart();
+                .clickOnAddToCart()
+                .clickOnCartIcon();
     }
 }

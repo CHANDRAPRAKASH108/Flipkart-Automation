@@ -1,24 +1,20 @@
 package pages;
 
-import driver.Driver;
 import driver.DriverManager;
 import enums.WaitStrategy;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
-import java.util.Set;
+
 
 public class LandingPage extends BasePage {
 
     private static final By search_box_element = By.name("q");
     private static final By all_search_result_element = By.xpath("//div[@class='KzDlHZ']");
-    private static final By add_to_cart_element = By.xpath("//button[.//span[contains(text(), 'Add to cart')]]");
+    private static final By add_to_cart_element = By.xpath("//*[@id=\"container\"]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]");
+    private static final By cart_icon_element = By.xpath("//a[contains(@href, 'viewcart')]");
 
     public LandingPage searchItem(String searchString) {
         sendKeys(search_box_element, WaitStrategy.CLICKABLE, searchString);
@@ -40,16 +36,22 @@ public class LandingPage extends BasePage {
     }
 
     public LandingPage clickOnAddToCart() throws InterruptedException {
-        WebElement element = DriverManager.getDriver().findElement(add_to_cart_element);
-        ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
-        clickElement(add_to_cart_element, WaitStrategy.CLICKABLE);
+        WebElement addToCartButton = DriverManager.getDriver().findElement(add_to_cart_element);
+        Actions actions = new Actions(DriverManager.getDriver());
+        actions.moveToElement(addToCartButton).click().perform();
+        //clickElement(add_to_cart_element, WaitStrategy.CLICKABLE);
         return this;
     }
 
     public LandingPage enterIntoProductDescriptionPage(String windowHandleSearchIdentifier) throws InterruptedException {
         switchWindowHandle(windowHandleSearchIdentifier);
-//        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(15));
-//        wait.until(ExpectedConditions.presenceOfElementLocated(add_to_cart_element));
+        Thread.sleep(15000);
+        return this;
+    }
+
+    public LandingPage clickOnCartIcon() throws InterruptedException {
+        clickElement(cart_icon_element, WaitStrategy.CLICKABLE);
+        Thread.sleep(5000);
         return this;
     }
 }
