@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-01T19:10:24 IST" name="All Test Suite" finished-at="2025-03-01T19:12:11 IST" duration-ms="106950">
+    <groups>
+    </groups>
+    <test started-at="2025-03-01T19:10:24 IST" name="FlipkartAutomation" finished-at="2025-03-01T19:12:11 IST" duration-ms="106950">
+      <class name="tests.LandingScreenTests">
+        <test-method signature="addToCart(java.util.Map)[pri:0, instance:tests.LandingScreenTests@3ce1e309]" started-at="2025-03-01T19:10:29 IST" name="addToCart" data-provider="getAddToCartData" finished-at="2025-03-01T19:12:07 IST" duration-ms="98787" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{searchtext=Iphone, execute=yes}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method signature="addToCart(java.util.Map)[pri:0, instance:tests.LandingScreenTests@3ce1e309]" started-at="2025-03-01T19:10:29 IST" name="addToCart" data-provider="getAddToCartData" finished-at="2025-03-01T19:12:04 IST" duration-ms="95284" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{searchtext=TV, execute=yes}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method signature="addToCart(java.util.Map)[pri:0, instance:tests.LandingScreenTests@3ce1e309]" started-at="2025-03-01T19:10:29 IST" name="addToCart" data-provider="getAddToCartData" finished-at="2025-03-01T19:12:02 IST" duration-ms="93398" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{searchtext=ipad, execute=yes}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+      </class> <!-- tests.LandingScreenTests -->
+      <class name="tests.FlightBookingTest">
+        <test-method signature="bookFlight(java.util.Map)[pri:0, instance:tests.FlightBookingTest@5af3afd9]" started-at="2025-03-01T19:10:29 IST" name="bookFlight" data-provider="getBookFlightData" finished-at="2025-03-01T19:11:48 IST" duration-ms="79078" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{arrivalcity=Delhi, departcity=Patna}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookFlight -->
+        <test-method signature="bookFlight(java.util.Map)[pri:0, instance:tests.FlightBookingTest@5af3afd9]" started-at="2025-03-01T19:10:29 IST" name="bookFlight" data-provider="getBookFlightData" finished-at="2025-03-01T19:11:49 IST" duration-ms="80151" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{arrivalcity=Pune, departcity=Mumbai}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookFlight -->
+      </class> <!-- tests.FlightBookingTest -->
+    </test> <!-- FlipkartAutomation -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
