@@ -39,13 +39,12 @@ public class LandingPage extends BasePage {
         WebElement addToCartButton = DriverManager.getDriver().findElement(add_to_cart_element);
         Actions actions = new Actions(DriverManager.getDriver());
         actions.moveToElement(addToCartButton).click().perform();
-        //clickElement(add_to_cart_element, WaitStrategy.CLICKABLE);
         return this;
     }
 
     public LandingPage enterIntoProductDescriptionPage(String windowHandleSearchIdentifier) throws InterruptedException {
         switchWindowHandle(windowHandleSearchIdentifier);
-        Thread.sleep(15000);
+        Thread.sleep(5000);
         return this;
     }
 

@@ -19,4 +19,14 @@ public class DataProviderUtils {
         }
         return data;
     }
+
+    @DataProvider(parallel = true)
+    public static Object[][] getBookFlightData() {
+        List<Map<String, String>> excelResult = ExcelUtils.readExcelValue(FrameworkConstant.getBookFlightSheet());
+        Object[][] data = new Object[excelResult.size()][1];
+        for (int i = 0; i < excelResult.size(); i++) {
+            data[i][0] = excelResult.get(i);
+        }
+        return data;
+    }
 }

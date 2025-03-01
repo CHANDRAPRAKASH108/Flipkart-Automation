@@ -5,9 +5,10 @@
         <listener class-name="listener.AnnotationProcessor"/>
         <listener class-name="listener.FrameworkListener"/>
     </listeners>
-    <test thread-count="2"  verbose="2" parallel="methods" name="FlipkartAutomation">
+    <test parallel="methods" thread-count="5" verbose="2" name="FlipkartAutomation">
         <classes>
             <class name="tests.LandingScreenTests"/>
+            <class name="tests.FlightBookingTest"/>
         </classes>
     </test>
 </suite>
