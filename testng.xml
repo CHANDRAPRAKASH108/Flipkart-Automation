@@ -3,8 +3,9 @@
 <suite name="All Test Suite">
     <listeners>
         <listener class-name="listener.AnnotationProcessor"/>
+        <listener class-name="listener.FrameworkListener"/>
     </listeners>
-    <test thread-count="2"  verbose="2" parallel="methods" name="C:/Users/91754/Desktop/flipkartAutomation">
+    <test thread-count="2"  verbose="2" parallel="methods" name="FlipkartAutomation">
         <classes>
             <class name="tests.LandingScreenTests"/>
         </classes>

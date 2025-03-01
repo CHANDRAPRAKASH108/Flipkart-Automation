@@ -14,7 +14,7 @@ public class Driver {
 
     }
 
-    public static void initDriver(String browser) throws MalformedURLException {
+    public static void initDriver(String browser) {
         if (Objects.isNull(DriverManager.getDriver())){
             try{
                 WebDriver webDriver = DriverFactory.getDriver(browser);
