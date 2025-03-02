@@ -13,26 +13,28 @@ import java.util.Map;
 import java.util.Objects;
 
 public class BaseTest {
-    private static List<Map<String, String>> browserResult;
+//    private static List<Map<String, String>> browserResult;
 
-    static {
-        browserResult = ExcelUtils.readExcelValue(FrameworkConstant.getTestRunnerSheet());
-    }
-
-    private String getBrowserForTest(String testName) {
-        System.out.println(testName);
-        for (Map<String, String> row : browserResult) {
-            if (Objects.equals(row.get("testName").trim(), testName)) {
-                System.out.println(row.get("browser"));
-                return row.get("browser");
-            }
-        }
-        return "chrome";
-    }
+//    static {
+//        browserResult = ExcelUtils.readExcelValue(FrameworkConstant.getTestRunnerSheet());
+//    }
+//
+//    private String getBrowserForTest(String testName) {
+//        System.out.println(testName);
+//        for (Map<String, String> row : browserResult) {
+//            if (Objects.equals(row.get("testName").trim(), testName)) {
+//                System.out.println(row.get("browser"));
+//                return row.get("browser");
+//            }
+//        }
+//        return "chrome";
+//    }
 
     @BeforeMethod
-    public void setup(Method method) {
-        Driver.initDriver(getBrowserForTest(method.getName()));
+    public void setup(Object[] data) {
+        Map<String, String> methodRef = (Map<String, String>) data[0];
+        System.out.println("a"+methodRef.get("browser")+"a");
+        Driver.initDriver(methodRef.get("browser"));
     }
 
     @AfterMethod

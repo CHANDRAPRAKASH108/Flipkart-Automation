@@ -36,8 +36,8 @@ public class DriverFactory {
         } else if (browser.equalsIgnoreCase("edge")) {
             if (runMode.equalsIgnoreCase("remote")) {
                 DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-                desiredCapabilities.setBrowserName("edge");
-                driver = new RemoteWebDriver(new URL(""), desiredCapabilities);
+                desiredCapabilities.setBrowserName("MicrosoftEdge");
+                driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), desiredCapabilities);
             } else {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
@@ -46,7 +46,7 @@ public class DriverFactory {
             if (runMode.equalsIgnoreCase("remote")) {
                 DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                 desiredCapabilities.setBrowserName("firefox");
-                driver = new RemoteWebDriver(new URL(""), desiredCapabilities);
+                driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), desiredCapabilities);
             } else {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();

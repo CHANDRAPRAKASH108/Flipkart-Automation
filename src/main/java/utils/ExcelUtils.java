@@ -21,7 +21,7 @@ public class ExcelUtils {
         try (FileInputStream fs = new FileInputStream(FrameworkConstant.getExcelFilePath()); XSSFWorkbook xssfWorkbook = new XSSFWorkbook(fs)){
             XSSFSheet sheet = xssfWorkbook.getSheet(sheetName);
             Map<String, String> map;
-            for (int i=1; i<sheet.getLastRowNum(); i++){
+            for (int i=1; i<=sheet.getLastRowNum(); i++){
                 map = new HashMap<>();
                 for (int j=0; j< sheet.getRow(0).getLastCellNum(); j++){
                     String key = sheet.getRow(0).getCell(j).getStringCellValue();

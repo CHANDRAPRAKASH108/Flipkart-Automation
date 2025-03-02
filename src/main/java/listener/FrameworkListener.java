@@ -1,19 +1,13 @@
 package listener;
 
 import annotation.FrameworkAnnotation;
-import constants.FrameworkConstant;
-import driver.Driver;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import report.ExtentLogger;
 import report.ExtentReport;
-import utils.ExcelUtils;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 
 public class FrameworkListener implements ITestListener, ISuiteListener {
 
