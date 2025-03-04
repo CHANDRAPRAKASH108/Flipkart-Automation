@@ -1,4 +1,3 @@
-version: "3.8"
 
 services:
   selenium-hub:
@@ -9,6 +8,17 @@ services:
     environment:
       - SE_GRID_MAX_SESSION=5
       - SE_GRID_MAX_INSTANCES=10
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: "8g"
 
   chrome-node:
     image: selenium/node-chrome
@@ -20,7 +30,7 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     deploy:
-      replicas: 5  # Start with 2 Chrome nodes (scale manually if needed)
+      replicas: 2
       mode: replicated
       resources:
         limits:
@@ -31,8 +41,11 @@ services:
           memory: "512M"
       restart_policy:
         condition: on-failure
-      update_config:
-        parallelism: 5
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   firefox-node:
     image: selenium/node-firefox
@@ -44,7 +57,7 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     deploy:
-      replicas: 1  # Start with 1 Firefox node
+      replicas: 1
       mode: replicated
       resources:
         limits:
@@ -55,8 +68,11 @@ services:
           memory: "512M"
       restart_policy:
         condition: on-failure
-      update_config:
-        parallelism: 1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   edge-node:
     image: selenium/node-edge
@@ -68,7 +84,7 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     deploy:
-      replicas: 1  # Start with 1 Edge node
+      replicas: 1
       mode: replicated
       resources:
         limits:
@@ -79,5 +95,9 @@ services:
           memory: "512M"
       restart_policy:
         condition: on-failure
-      update_config:
-        parallelism: 1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+

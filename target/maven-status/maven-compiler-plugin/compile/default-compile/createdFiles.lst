@@ -24,4 +24,5 @@ utils\DataProviderUtils.class
 exceptions\ErrorWhileReadingExcelException.class
 enums\CategoryType.class
 pages\LandingPage.class
+utils\ELKUtils.class
 report\ExtentReport.class

@@ -4,6 +4,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import driver.DriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import utils.ELKUtils;
 
 public class ExtentLogger {
     private ExtentLogger() {
