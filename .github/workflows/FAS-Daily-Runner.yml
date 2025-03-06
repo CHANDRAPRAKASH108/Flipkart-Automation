@@ -9,6 +9,7 @@ on:
       - main
   schedule:
     - cron: '30 20 * * *'  # Runs at 8:30 PM UTC every day
+  workflow_dispatch:
 
 jobs:
   selenium-tests:
