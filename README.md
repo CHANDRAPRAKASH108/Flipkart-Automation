@@ -5,7 +5,6 @@ This project is a **Test Automation Framework** for Flipkart, utilizing **Seleni
 ## 📌 Features
 - **Automated UI Testing** using **Selenium WebDriver**
 - **Parallel execution** with **Selenium Grid (Docker)**
-- **API Testing** with **Rest Assured**
 - **Reports & Logs** with **Extent Reports & Log4j**
 - **CI/CD Integration** via **GitHub Actions**
 - **Scheduled Execution** daily at **8:30 PM UTC**
