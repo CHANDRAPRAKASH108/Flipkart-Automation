@@ -1,0 +1,36 @@
+name: Flipkart Automation Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '30 20 * * *'  # Runs at 8:30 PM UTC every day
+
+jobs:
+  selenium-tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker
+        run: docker --version  # Just to verify Docker is installed
+
+      - name: Start Selenium Grid with Docker Compose
+        run: docker-compose up -d
+
+      - name: Wait for Selenium Grid to be Ready
+        run: |
+          echo "Waiting for Selenium Grid to start..."
+          sleep 20
+
+      - name: Run Maven Tests
+        run: mvn clean test
+
+      - name: Stop Selenium Grid
+        run: docker-compose down
