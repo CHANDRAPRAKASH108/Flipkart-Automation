@@ -41,3 +41,10 @@ jobs:
 
       - name: Stop Selenium Grid
         run: docker compose down
+        
+      - name: Upload FAS Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Extent-Test-Report
+          path: extent-test-output/Index.html
+          retention-days: 7
