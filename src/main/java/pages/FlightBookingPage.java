@@ -28,13 +28,13 @@ public class FlightBookingPage extends BasePage{
 
     public FlightBookingPage enterValueForDepartureCity(String departCity){
         sendKeys(depart_city_element, WaitStrategy.CLICKABLE, departCity);
-        selectFlightCity(departCity);
+        //selectFlightCity(departCity);
         return this;
     }
 
     public FlightBookingPage enterValueForArrivalCity(String arrivalCity){
         sendKeys(arrival_city_element, WaitStrategy.CLICKABLE, arrivalCity);
-        selectFlightCity(arrivalCity);
+        //selectFlightCity(arrivalCity);
         return this;
     }
 
