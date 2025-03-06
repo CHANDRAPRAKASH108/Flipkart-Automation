@@ -122,7 +122,7 @@ Check `logback.xml` and ensure `log4j-core` is included in `pom.xml`.
 ---
 
 ## 📜 License
-This project is **open-source** under the [MIT License](LICENSE).
+This project is **open-source**
 
 Happy Testing! 🚀
 
