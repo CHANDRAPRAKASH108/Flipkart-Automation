@@ -112,15 +112,6 @@ Check `logback.xml` and ensure `log4j-core` is included in `pom.xml`.
 
 ---
 
-## 🤝 Contribution
-1. Fork the repository
-2. Create a new branch (`feature-xyz`)
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
----
-
 ## 📜 License
 This project is **open-source**
 
