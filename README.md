@@ -48,7 +48,7 @@ You can trigger the test run manually from GitHub Actions.
 
 ### **Scheduled Execution**
 - The tests **run automatically every day at 8:30 PM UTC** via **GitHub Actions**.
-- The workflow is defined in `.github/workflows/selenium-tests.yml`.
+- The workflow is defined in `.github/workflows/FAS-Daily-Runner.yml`.
 
 ---
 
