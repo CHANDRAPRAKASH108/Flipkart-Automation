@@ -91,29 +91,5 @@ The GitHub Actions workflow:
 6. **Uploads Extent Report as an artifact**.
 
 ---
-
-## ❓ Troubleshooting
-### **Docker not found?**
-Ensure Docker is installed and running.
-```sh
-docker --version
-docker-compose --version
-```
-
-### **Invalid Target Release: 19?**
-Ensure Java 19 is installed:
-```sh
-java -version
-```
-If not, install Java 19 and set it as the default version.
-
-### **Tests not logging?**
-Check `logback.xml` and ensure `log4j-core` is included in `pom.xml`.
-
----
-
-## 📜 License
-This project is **open-source**
-
 Happy Testing! 🚀
 
